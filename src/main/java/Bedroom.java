@@ -24,4 +24,25 @@ public class Bedroom {
     public RoomType getRoomType(){
         return type;
     }
+
+    public void checkIn(Guest guest){
+        this.collectionOfGuests.add(guest);
+    }
+
+    public int countGuestsInRoom(){
+        return this.collectionOfGuests.size();
+    }
+
+    public void allowCheckIn(Guest guest){
+        if (countGuestsInRoom() < this.capacity){
+            this.checkIn(guest);
+        } else {
+            this.collectionOfGuests.clear();
+        }
+    }
+
+    public void checkOut(Guest guest){
+        this.collectionOfGuests.remove(guest);
+    }
+
 }

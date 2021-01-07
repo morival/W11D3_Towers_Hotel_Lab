@@ -12,7 +12,7 @@ public class HotelTest {
     public void setUp() {
         hotel = new Hotel();
         bedroom = new Bedroom(1, 2, RoomType.SINGLE);
-        conferenceRoom = new ConferenceRoom();
+        conferenceRoom = new ConferenceRoom("Presidential Suite", 100);
 
     }
 
