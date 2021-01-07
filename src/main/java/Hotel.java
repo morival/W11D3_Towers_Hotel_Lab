@@ -13,6 +13,18 @@ public class Hotel {
         return this.bedroomCollection.size();
     }
 
+    public int countConferenceRooms() {
+        return this.conferenceRoomCollection.size();
+    }
+
+    public void addBedroom(Bedroom bedroom) {
+        this.bedroomCollection.add(bedroom);
+    }
+
+    public void addConferenceRoom(ConferenceRoom conferenceRoom) {
+        this.conferenceRoomCollection.add(conferenceRoom);
+    }
+
 //    private Room room;
 //    public Guest guest;
 //

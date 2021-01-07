@@ -22,5 +22,19 @@ public class HotelTest {
     }
 
     @Test
+    public void ifHotelHasNoConferenceRooms() {
+        assertEquals(0, hotel.countConferenceRooms());
+    }
 
+    @Test
+    public void canAddBedrooms() {
+        hotel.addBedroom(bedroom);
+        assertEquals(1, hotel.countBedrooms());
+    }
+
+    @Test
+    public void canAddConferenceRooms() {
+        hotel.addConferenceRoom(conferenceRoom);
+        assertEquals(1, hotel.countConferenceRooms());
+    }
 }
