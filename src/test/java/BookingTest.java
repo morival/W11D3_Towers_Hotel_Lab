@@ -11,7 +11,7 @@ public class BookingTest {
 
     @Before
     public void setUp(){
-        bedroom1 = new Bedroom(1, 2, RoomType.SINGLE);
+        bedroom1 = new Bedroom(1, 2, RoomType.SINGLE, 99.99);
 //        bedroom2 = new Bedroom(2, 2, RoomType.SINGLE);
         booking = new Booking(1, bedroom1);
     }

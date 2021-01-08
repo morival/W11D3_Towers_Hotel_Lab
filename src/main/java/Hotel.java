@@ -3,10 +3,12 @@ import java.util.ArrayList;
 public class Hotel {
     private ArrayList<Bedroom> bedroomCollection;
     private ArrayList<ConferenceRoom> conferenceRoomCollection;
+    private ArrayList<Booking> bookingList;
 
     public Hotel() {
         this.bedroomCollection = new ArrayList<Bedroom>();
         this.conferenceRoomCollection = new ArrayList<ConferenceRoom>();
+        this.bookingList = new ArrayList<Booking>();
     }
 
     public int countBedrooms() {
@@ -25,6 +27,13 @@ public class Hotel {
         this.conferenceRoomCollection.add(conferenceRoom);
     }
 
+    public int countBookings() {
+        return this.bookingList.size();
+    }
+
+    public void addBooking(Booking booking) {
+        this.bookingList.add(booking);
+    }
 //    private Room room;
 //    public Guest guest;
 //

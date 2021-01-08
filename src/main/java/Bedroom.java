@@ -3,14 +3,17 @@ import java.util.ArrayList;
 public class Bedroom {
     private int roomNumber;
     private int capacity;
-    private ArrayList<Guest> collectionOfGuests;
     private RoomType type;
+    private double nightRate;
+    private ArrayList<Guest> collectionOfGuests;
 
-    public Bedroom(int roomNumber, int capacity, RoomType type) {
+    public Bedroom(int roomNumber, int capacity, RoomType type, double nightRate) {
         this.roomNumber = roomNumber;
         this.capacity = capacity;
-        this.collectionOfGuests = new ArrayList<Guest>();
         this.type = type;
+        this.nightRate = nightRate;
+        this.collectionOfGuests = new ArrayList<Guest>();
+
     }
 
     public int getRoomNumber(){
@@ -22,7 +25,11 @@ public class Bedroom {
     }
 
     public RoomType getRoomType(){
-        return type;
+        return this.type;
+    }
+
+    public double getNightRate() {
+        return this.nightRate;
     }
 
     public void checkIn(Guest guest){
